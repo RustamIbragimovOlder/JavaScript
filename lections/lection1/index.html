@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Lection1</title>
+
+</head>
+
+<body>
+    <header>
+        <h1>Lorem ipsum dolor sit amet.</h1>
+    </header>
+
+    <main>
+        <a href="#" class="arrow-left"></a>
+        <img src="#" alt="img1">
+        <img src="#" alt="img2">
+        <img src="#" alt="img3">
+        <a href="#" class="arrow-right"></a>
+    </main>
+
+    <footer>
+        <p>Lorem, ipsum dolor.</p>
+    </footer>
+
+    <!-- Правильное решение, правильное место -->
+    <script>
+        let countClickButton = 0;
+        countClickButton = countClickButton + 2; // обновление значения переменной
+        console.log(typeof countClickButton);
+
+        // Строка
+        console.log(`Нажали на кнопку ${countClickButton} раз(а)`); // Нажали на кнопку 2 раз
+        console.log(`Нажали на кнопку ${countClickButton + 5} раз(а)`); // Нажали на кнопку 7 раз
+        console.log("Нажали на кнопку ${countClickButton + 5} раз(а)"); // Нажали на кнопку ${countClickButton + 5} раз(а)
+        let string = "Hello";
+        console.log(typeof string);
+        string = 'Hello';
+        let resultString = 8;
+        let literal = `Результат: ${resultString}`; // Результат: 8
+        console.log(literal);
+        let emptyString = "";
+
+        // Число min -(2^53 - 1) max (2^53 - 1)
+        let numberGradeValue = 5;
+        console.log(typeof numberGradeValue);
+        let stringGradeValue = "A";
+        console.log(typeof stringGradeValue);
+        const resultNamberPlus = numberGradeValue + stringGradeValue;
+        console.log(resultNamberPlus); // 5A
+        const resultNamberMinus = numberGradeValue - stringGradeValue;
+        console.log(resultNamberMinus); // NaN
+        console.log(numberGradeValue / 0); // Infinity
+        console.log(-numberGradeValue / 0); // -Infinity
+
+        // Булево значение
+        let isPassExam = true;
+        if (isPassExam) console.log('Поздравляем, Вы сдали экзамен!'); // Поздравляем, Вы сдали экзамен!
+
+        // Undefined
+        let isPassExamUndefined;
+        console.log(isPassExamUndefined); // undefined
+        if (isPassExamUndefined) console.log('Поздравляем, Вы сдали экзамен!'); // НИЧЕГО, так как undefined в условиях приводится к false (смотри ниже про приведение типов).
+
+        // Объект
+        let student = {
+            firstName: "Ivan",
+            lastName: "Petrov",
+            age: 33,
+            faculty: "Information Technologies"
+        };
+        console.log(`${student.firstName} ${student['lastName']} is ${student.age} years old`); // Ivan Petrov is 33 years old.
+
+        // Array
+        let listOfBooks = ['Стив Макконел "Совершенный код"', 'Роберт Мартин "Чистый код"'];
+        console.log(listOfBooks[0]); // Стив Макконнелл "Совершенный код"
+        console.log(listOfBooks[1]); // Роберт Мартин "Чистый код"
+        console.log(listOfBooks.length); // 2 - длина массива (2 элемента).
+
+        // Function
+        const add2 = function (x) {
+            return x + 2;
+        }
+        console.log(add2.toString()); // function(x) { return x + 2; }
+        console.log(add2(10)); // 12 - выводится результат выполнения функции
+
+        // Symbol
+        const uniqKey = Symbol();
+        console.log(uniqKey.toString()); // Symbol()
+        const uniqKey2 = Symbol('test');
+        const uniqKey3 = Symbol('test');
+        console.log(uniqKey2.toString()); // Symbol('test')
+        console.log(uniqKey2 == uniqKey3) // false - символы всегда создаются уникальными
+
+        // BigInt
+        let bigNumber = 63374851375010000n;
+        console.log(bigNumber); // 63374851375010000n
+
+    </script>
+
+</body>
+
+</html>
