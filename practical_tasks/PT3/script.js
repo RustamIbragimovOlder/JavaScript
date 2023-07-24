@@ -15,8 +15,8 @@ const salary = (rate) => rate * 0.87; // Функция расчета ЗП бе
 
 const userMoney = Number(prompt('Сколько Вы зарабатываете?'));
 
-if (isNaN(userMoney)) {
-  alert('Данные введены неверно! Необходимо ввести число.');
+if (Number.isNaN(userMoney) || userMoney < 0) {
+  alert('Данные введены неверно! Необходимо ввести положительное число.');
 } else {
   alert(
     `Размер заработной платы за вычетом налогов равен ${salary(userMoney)}`
