@@ -93,7 +93,7 @@ alert(x); // выводит 1
 function helloName(name) {
   console.log(name);
 }
-helloName("Rustam");
+helloName('Rustam');
 
 // Example 4
 let count = 5;
@@ -109,13 +109,13 @@ counter();
 console.log(count); // 8
 
 // Example 5
-let age = Number(prompt("Сколько Вам лет?"));
+let age = Number(prompt('Сколько Вам лет?'));
 const levelUpAge = () => age + 5;
 console.log(`Через 5 лет Вам будет ${levelUpAge()} лет`);
 
 // Example 6
 function hello() {
-  console.log("Hello function");
+  console.log('Hello function');
 }
 hello();
 
@@ -126,13 +126,13 @@ const salary = (money) => {
   money = money * 0.87;
   return money * 0.75;
 };
-const userMoney = Number(prompt("Сколько Вы зарабатываете?"));
+const userMoney = Number(prompt('Сколько Вы зарабатываете?'));
 console.log(`Для расходов ${salary(userMoney)}`);
 
 // Браузерные события
 function buy() {
-  alert("Поздравляем!");
-  alert("Вы нажали на кнопку купить");
+  alert('Поздравляем!');
+  alert('Вы нажали на кнопку купить');
 }
 
 // Реализации игры Загадки
@@ -142,12 +142,12 @@ function goRiddle() {
     let userAnswer = prompt(question); // внутри prompt передаём вопрос
     if (userAnswer.toLowerCase() === answer) {
       // внутри условия if вместо answer будет ответ на загадку
-      alert("Молодец, ответил верно");
+      alert('Молодец, ответил верно');
     } else {
-      alert("Не угадал");
+      alert('Не угадал');
     }
   }
-  riddles("Не лает, не кусает, а в дом не пускает", "замок");
-  riddles("Зимой и летом одним цветом", "елка");
-  riddles("Сто одёжек и все без застежек", "капуста");
+  riddles('Не лает, не кусает, а в дом не пускает', 'замок');
+  riddles('Зимой и летом одним цветом', 'елка');
+  riddles('Сто одёжек и все без застежек', 'капуста');
 }
